@@ -5,13 +5,21 @@
     <title>BlueSafe</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-<header>
+<body class="container">
+    <header>
     <img src="{{ url_for('static', filename='images/IMG_3408.JPG') }}" alt="Logo" class="logo">
     <div class="title-block">
         <h1> Isaiah Smith</h1>
         <div class="tagline"> Becoming Undeniable</div>
 
     </div>
-
   </header>
+  <nav class="nav-bar"> 
+        <a href="/" class="nav-link">Home</a>
+        <a href="/projects" class="nav-link">Projects</a>
+        <a href="/about" class="nav-link">About Me</a>
+        <a href="/gallery" class="nav-link">Gallery</a>
+    </nav>
+</body>
+  
 </html>
