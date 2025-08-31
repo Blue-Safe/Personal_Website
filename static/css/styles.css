@@ -4,6 +4,8 @@ margin: 0;
 background: ivory;
 color: #222;
 }
+
+
 header {
 position: fixed;
 top: 0;
@@ -16,12 +18,15 @@ z-index: 1000;
 
 display: flex;
 align-items: center;
-justify-content: space-between;
 
-padding: irem 2rem;
+padding: 2rem;
 }
 
 .logo {
-margin: 80px;
-
+height: 100px;
+margin-right: 1rem;
+}
+.title {
+flex: 1;
+text-align: center;
 }
