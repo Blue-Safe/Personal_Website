@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body class="container">
+
+
     <header>
     <img src="{{ url_for('static', filename='images/IMG_3408.JPG') }}" alt="Logo" class="logo">
     <div class="title-block">
@@ -14,17 +16,58 @@
 
     </div>
   </header>
+
+
   <nav class="nav-bar"> 
         <a href="/" class="nav-link">Home</a>
         <a href="/projects" class="nav-link">Projects</a>
         <a href="/about" class="nav-link">About Me</a>
         <a href="/gallery" class="nav-link">Gallery</a>
     </nav>
-    <p>
 
-        If you are here right now, Your pretty cool! 
-        
-    </p>
+
+    <main>
+        <p>
+            wow, this is some example text!
+        </p>
+        <img src="{{url_for('static', filename='images/cooper.png')}}" alt= "example picture" class ="mimg" >
+    </main>
+
+
+    <footer> 
+
+        <div>
+            <p class ="footerH">
+                My links
+            </p>
+            <p> 
+                Git hub
+             </p>
+             <p>
+                linkedIn
+             </p>
+             <p>
+                I don't know but something else
+             </p>
+        </div>
+        <div>
+            <p class="footerH">
+                Reach out to me!
+            </p>
+            <p> 
+                my number
+             </p>
+             <p>
+                My school email
+             </p>
+             <p>
+                my personal email
+             </p>
+        </div>
+
+    </footer>
+
+
 </body>
   
 </html>

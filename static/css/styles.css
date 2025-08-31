@@ -6,8 +6,9 @@
 }
 
 body {
-font-family: system-ui, sans-serif;
+height: 100%;
 margin: 0;
+font-family: system-ui, sans-serif;
 background: #f3f2e2;
 color: #2f281d;
 }
@@ -64,5 +65,42 @@ header {
   background: rgba(76, 29, 179, 0.1);
   border-radius: 8px;
   color: var(--text-color-2);
+
+}
+
+/* ----------------------------------------------- footer stuff---------------------------------------*/
+
+
+footer {
+text-align: center;
+background-color: var(--color-one);
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+color: var(--text-color);
+font-size: smaller;
+
+}
+
+.footerH {
+  font-size: medium;
+  font-style: bold;
+}
+
+/* ----------------------------- main body section stuff ------------------------------------ */
+
+main {
+  display:flex;
+  flex: 1;
+  padding: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: small;
+}
+
+.mimg {
+  height: 500px;
+  width: auto;
+  margin-trim: 50px;
 
 }
