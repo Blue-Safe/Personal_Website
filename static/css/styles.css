@@ -87,6 +87,11 @@ font-size: smaller;
   font-style: bold;
 }
 
+footer a {
+font-style: normal;
+color: var(--text-color)
+}
+
 /* ----------------------------- main body section stuff ------------------------------------ */
 
 main {
