@@ -2,7 +2,8 @@
 {% block title %}{{ post.title }} | Blog | Isaiah Smith{% endblock %}
 
 {% block content %}
-  <article class="post">
+<div class="post">
+  <article>
     <h1>{{ post.title }}</h1>
     <small>{{ post.date }}</small>
 
@@ -12,4 +13,5 @@
 
     <p class="blog_post"><a href="{{ url_for('blog') }}">← Back to Blog</a></p>
   </article>
+</div>
 {% endblock %}
