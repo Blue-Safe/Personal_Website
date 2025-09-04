@@ -8,7 +8,7 @@
 body {
 height: 100%;
 margin: 0;
-font-family: system-ui, sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 background: #f3f2e2;
 color: #2f281d;
 }
@@ -34,15 +34,6 @@ header {
   width: auto;
 }
 
-.title-block {
-  flex: 1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.title-block .tagline { margin: 0; font-style: italic; }
 
 .nav-bar {
   background: var(--color-two);
@@ -77,7 +68,7 @@ background-color: var(--color-one);
 display: flex;
 justify-content: space-evenly;
 align-items: center;
-color: var(--text-color);
+color: var(--text-color-2);
 font-size: smaller;
 
 }
@@ -90,7 +81,7 @@ font-size: smaller;
 
 footer a {
 font-style: normal;
-color: var(--text-color)
+color: var(--text-color-2)
 }
 
 /* ----------------------------- main body section stuff ------------------------------------ */
@@ -98,15 +89,28 @@ color: var(--text-color)
 main {
   display:flex;
   flex: 1;
-  padding: 2rem;
+  padding: 1rem;
+  margin-left:15%;
+  margin-right:15%;
   justify-content: space-evenly;
   align-items: center;
   font-size: small;
 }
 
+main p {
+  width:75%;
+  height: fit-content;
+}
+
 .mimg {
   height: 500px;
   width: auto;
-  margin-trim: 50px;
+  margin: 50px;
 
+}
+
+.verticleText {
+  justify-content: left;
+  margin-bottom: 50px;
+  align-items: column;
 }

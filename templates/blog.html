@@ -1,0 +1,22 @@
+{%extends "base.html"%}
+
+{%block title%}Blog{%endblock%}
+{%block content%}
+
+<h2> Blog </h2>
+
+{% if posts %}
+<ul class="post-list">
+    {% for p in posts %}
+    <li>
+        <a href="{{ url_for('blog_post', slug=p['slug']) }}">{{ p['title'] }}</a>
+        <small>{{ p['data'] }}</small>
+        <p>{{ p['summary'] }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{%else%}
+ <p> No posts yet...</p>
+{% endif %}
+
+{% endblock %}

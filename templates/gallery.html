@@ -1,63 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
-<body class="container">
+{% extends "base.html" %}
 
+{% block title %}Gallery | Isaiah Smith{% endblock %}
 
-    <header>
-    <img src="{{ url_for('static', filename='images/IMG_3408.JPG') }}" alt="Logo" class="logo">
-    <div class="title-block">
-        <h1> Isaiah Smith</h1>
-        <div class="tagline"> Becoming Undeniable</div>
-
-    </div>
-  </header>
-
-
-  <nav class="nav-bar"> 
-        <a href="/" class="nav-link">Home</a>
-        <a href="/projects" class="nav-link">Projects</a>
-        <a href="/about" class="nav-link">About Me</a>
-        <a href="/gallery" class="nav-link">Gallery</a>
-    </nav>
-
-
-    <main>
-        example text
-    </main>
-
-
-    <footer> 
-
-        <div>
-            <p class ="footerH">
-                My links
-            </p>
-            <a href="https://github.com/Blue-Safe">github</a>
-
-            <a href="https://www.linkedin.com/in/isaiah-smith-b03b11381/">linkedin</a>
-
-            <a class="footer" href="https://www.youtube.com/channel/UCl87c8Qo9XsgU7mlbTQUP0w">youtube</a>
-        </div>
-        <div>
-            <p class="footerH">
-                Reach out to me!
-            </p>
-             <p>
-                iws7238@rit.edu
-             </p>
-             <p>
-                isaiahsmith1776@gmail.com
-             </p>
-        </div>
-
-    </footer>
-
-
-</body>
-  
-</html>
+{% block content %}
+    <h2>Gallery</h2>
+    <p>Photos from my projects and builds.</p>
+{% endblock %}
