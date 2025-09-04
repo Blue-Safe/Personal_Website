@@ -2,14 +2,15 @@
 
 {%block title%}Blog{%endblock%}
 {%block content%}
-
+<div class="bbc">
 <h2> Blog </h2>
 
 {% if posts %}
-<ul class="post-list">
+<ul >
     {% for p in posts %}
-    <li>
+    <li class="blog-container">
         <a href="{{ url_for('blog_post', slug=p['slug']) }}">{{ p['title'] }}</a>
+        <small>{{p['date']}}</small>
         <small>{{ p['data'] }}</small>
         <p>{{ p['summary'] }}</p>
     </li>
@@ -18,5 +19,5 @@
 {%else%}
  <p> No posts yet...</p>
 {% endif %}
-
+</div>
 {% endblock %}

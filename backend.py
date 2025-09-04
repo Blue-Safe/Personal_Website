@@ -17,6 +17,62 @@ posts = [
           "date": "2025-08-02",
           "summary": "Made a GUI in python that communicated with the terminal to send signals over bluetooth",
           "body": "<p>Details...</p>"
+      },
+      {
+      "slug": "mark I recap",
+      "title": "CRUNCH Mark I -Recap", 
+      "date": "2025-09-02", 
+      "summary":"...",
+      "body": "<p>...</p>"
+      },
+      {
+      "slug": "mark I recap",
+      "title": "CRUNCH Mark I -Recap", 
+      "date": "2025-09-02", 
+      "summary":"...",
+      "body": "<p>...</p>"
+      },
+      {
+      "slug": "mark I recap",
+      "title": "CRUNCH Mark I -Recap", 
+      "date": "2025-09-02", 
+      "summary":"...",
+      "body": "<p>...</p>"
+      },
+      {
+      "slug": "mark I recap",
+      "title": "CRUNCH Mark I -Recap", 
+      "date": "2025-09-02", 
+      "summary":"...",
+      "body": "<p>...</p>"
+      },
+      {
+      "slug": "mark I recap",
+      "title": "CRUNCH Mark I -Recap", 
+      "date": "2025-09-02", 
+      "summary":"...",
+      "body": "<p>...</p>"
+      },
+      {
+      "slug": "mark I recap",
+      "title": "CRUNCH Mark I -Recap", 
+      "date": "2025-09-02", 
+      "summary":"...",
+      "body": "<p>...</p>"
+      },
+      {
+      "slug": "mark I recap",
+      "title": "CRUNCH Mark I -Recap", 
+      "date": "2025-09-02", 
+      "summary":"...",
+      "body": "<p>...</p>"
+      },
+      {
+      "slug": "mark I recap",
+      "title": "CRUNCH Mark I -Recap", 
+      "date": "2025-09-02", 
+      "summary":"...",
+      "body": "<p>...</p>"
       }
       ]
 

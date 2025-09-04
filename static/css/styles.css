@@ -87,6 +87,10 @@ color: var(--text-color-2)
 /* ----------------------------- main body section stuff ------------------------------------ */
 
 main {
+  flex:1;
+}
+
+.hero {
   display:flex;
   flex: 1;
   padding: 1rem;
@@ -97,12 +101,12 @@ main {
   font-size: small;
 }
 
-main p {
+.hero p {
   width:75%;
   height: fit-content;
 }
 
-.mimg {
+.hero img {
   height: 500px;
   width: auto;
   margin: 50px;
@@ -113,4 +117,33 @@ main p {
   justify-content: left;
   margin-bottom: 50px;
   align-items: column;
+}
+
+/* ---------------------------------------------- blog stuff --------------------------------------------- */
+
+.blog-container {
+  width: 50%;
+  margin: 25px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--color-two);
+}
+
+li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+}
+li a:hover {
+  background: rgba(76, 29, 179, 0.1);
+  border-radius: 8px;
+  color: var(--text-color-2);
+
+}
+.bbc {
+  padding: 50 px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
