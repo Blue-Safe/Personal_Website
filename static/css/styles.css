@@ -123,11 +123,16 @@ main {
 /* ---------------------------------------------- blog stuff --------------------------------------------- */
 
 .blog-container {
+  font-size:30px;
   width: 50%;
   margin: 25px;
   border-radius: 10px;
   padding: 10px;
   background-color: var(--color-two);
+}
+
+.blog-container small {
+  font-size:20px;
 }
 
 li a {
@@ -144,19 +149,67 @@ li a:hover {
 
 }
 .bbc {
-  padding: 50 px;
+  justify-content:space-evenly;
+  align-items: center;
+  font-size:50px;
+  padding: 15 px;
   margin-left: 10%;
   margin-right: 10%;
 }
 
 .post {
   display:flex;
-  justify-content:space-evenly;
-  align-items: center;
-  margin-left:10%;
-  margin-right:10%;
+  align-self: flex-start;
+  margin: 10%;
 }
 
+
+.post h1 {
+font-size:50px;
+}
+.post small {
+  font-weight: bold;
+}
+.post li {
+  font-size: larger;
+  font-weight:bold;
+}
+.post p {
+  font-size:large;
+  font-weight:normal;
+}
 .post article {
+  font-size: 20px;
   align-items: left;
+  margin-right:3rem;
+}
+.imageSection {
+  
+  justify-content: space-evenly;
+}
+
+.imageWrapper {
+  background-color: var(--color-one);
+  border-radius: 15px;
+}
+
+.imageSection img {
+  background-color: var(--color-two);
+  border-radius: 15px;
+  padding:8px;
+  height: auto;
+  width: 300px;
+  margin:50px;
+}
+
+.caption {
+  flex:1;
+  font-weight:bold;
+  text-align:center;
+  background-color: var(--color-two);
+  padding:10px;
+  border-radius:15px;
+  margin-top:10%;
+  margin-bottom:10%;
+
 }

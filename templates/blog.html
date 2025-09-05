@@ -19,5 +19,22 @@
 {%else%}
  <p> No posts yet...</p>
 {% endif %}
+<h2> Milestone Blogs </h2>
+{% if posts %}
+<ul >
+    {% for p in posts %}
+        {% if p['highlight'] %}
+            <li class="blog-container">
+            <a href="{{ url_for('blog_post', slug=p['slug']) }}">{{ p['title'] }}</a>
+            <small>{{p['date']}}</small>
+            <small>{{ p['data'] }}</small>
+            <p>{{ p['summary'] }}</p>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{%else%}
+ <p> No posts yet...</p>
+{% endif %}
 </div>
 {% endblock %}

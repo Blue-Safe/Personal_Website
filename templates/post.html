@@ -13,5 +13,19 @@
 
     <p class="blog_post"><a href="{{ url_for('blog') }}">← Back to Blog</a></p>
   </article>
+  <div class="imageSection">
+  {% if post.imgs%}
+  {% for img in post.imgs%}
+  <div class="imageWrapper">
+  <img src="{{ url_for('static', filename=img[0]) }}">
+  <div class="caption">
+    {{img[1]}}
+  </div>
+  </div>
+  
+  {% endfor %}
+  {% endif %}
+
+</div>
 </div>
 {% endblock %}
