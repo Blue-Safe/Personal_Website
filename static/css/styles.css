@@ -123,8 +123,7 @@ main {
 /* ---------------------------------------------- blog stuff --------------------------------------------- */
 
 .blog-container {
-  font-size:30px;
-  width: 50%;
+  font-size:20px;
   margin: 25px;
   border-radius: 10px;
   padding: 10px;
@@ -149,12 +148,23 @@ li a:hover {
 
 }
 .bbc {
-  justify-content:space-evenly;
-  align-items: center;
-  font-size:50px;
-  padding: 15 px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items: normal;
+  font-size:30px;
+  padding: 15px;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.left {
+  width:50%;
+  
+}
+.right {
+  width:50%;
+  justify-self:right;
 }
 
 .post {

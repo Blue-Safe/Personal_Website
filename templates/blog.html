@@ -3,6 +3,7 @@
 {%block title%}Blog{%endblock%}
 {%block content%}
 <div class="bbc">
+<div class="left">
 <h2> Blog </h2>
 
 {% if posts %}
@@ -19,6 +20,8 @@
 {%else%}
  <p> No posts yet...</p>
 {% endif %}
+</div>
+<div class="right">
 <h2> Milestone Blogs </h2>
 {% if posts %}
 <ul >
@@ -36,5 +39,6 @@
 {%else%}
  <p> No posts yet...</p>
 {% endif %}
+</div>
 </div>
 {% endblock %}
