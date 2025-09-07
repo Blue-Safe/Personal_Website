@@ -1,28 +1,27 @@
 from flask import Flask, render_template
+import os, yaml, markdown
+from datetime import datetime
 
 app = Flask(__name__)
 
 
-posts = [
-    {
-      "slug": "mark I recap",
-      "title": "CRUNCH Mark I -Recap", 
-      "date": "2025-09-02",
-      "highlight": True, 
-      "summary":"...",
-      "body": "<p>All right, after taking a break, I'm ready to comeback with full force. I have 2 and a half weeks before I go back to school. So, here are my thoughts on MK I.</p> <h3> What went well </h3> <li> 3D printed frame <p>-Was strong, solid, and straightforward to assemble.</p></li> <li>  On board electronics <p>-Everything was compatable & worked. PCA board was a great call. I succsesfully could program all the moving parts and have them work together.</p></li>",
-      "imgs": [("images/MK1_coverON.jpg","Testing"),
-               ("images/MK1_skelly.jpg","This is also a test")]
-      },
-      {
-          "slug": "bluetooth gui",
-          "title": "bluetooth gui",
-          "date": "2025-08-02",
-          "highlight": False,
-          "summary": "Made a GUI in python that communicated with the terminal to send signals over bluetooth",
-          "body": "<p>Details...</p>"
-      }
-      ]
+POSTS_DIR = os.path.join(app.root_path, "content", "posts")
+
+def loadPosts():
+    posts=[]
+    for file in os.listdir(POSTS_DIR):
+        if file.endswith(".md"):
+            with open(os.path.join(POSTS_DIR, file), "r", encoding="utf-8") as f:
+                raw = f.read()
+            if raw.startswith("---"):
+                _, fm_text,md_text = raw.split("---",2)
+                meta =yaml.safe_load(fm_text)
+                html_body = markdown.markdown(md_text, extensions=["fenced_code","tables"])
+                meta["body_html"]=html_body
+                meta["date_obj"] = datetime.fromisoformat(meta["date"])
+                posts.append(meta)
+    return sorted(posts,key=lambda p: p["date_obj"], reverse=True)
+
 
 
 @app.route("/")
@@ -42,15 +41,15 @@ def gallery():
     return render_template("gallery.html")
 
 @app.route("/blog")
-def blog():
-    ordered = sorted(posts, key=lambda p: p["date"], reverse=True)    
-    return render_template("blog.html",posts=ordered)
+def blog():   
+    return render_template("blog.html",posts=loadPosts())
 @app.route("/blog/<slug>")
 def blog_post(slug):
+    posts = loadPosts()
     post = next((p for p in posts if p["slug"] == slug), None)
-    if post is None:
+    if not post:
         return "Post not found", 404
-    return render_template("post.html",post=post)
+    return render_template("post.html", post=post)
 
 
 
